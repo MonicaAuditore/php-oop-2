@@ -14,7 +14,8 @@ class Card {
   public function printCard() {
   //card del prodotto
   echo '<div class="card">';
-  echo '<img src="' . $this->prodotto->immagine . 'alt="' . $this->prodotto->nome . '">';
+  echo '<img src="' . $this->prodotto->immagine . '" alt="' . $this->prodotto->nome . '">';
+
   echo '<h2>' . $this->prodotto->nome . '</h2>';
   echo '<h3>' . $this->prodotto->prezzo . '</h3>';
   echo '<img src="' . $this->categoria->icona . '">';
