@@ -1,6 +1,11 @@
 <?php
 
+require_once __DIR__.'/traits/nome.php';
+
 class Prodotto {
+
+use nome;
+
   public $nome;
   public $descrizione;
   public $prezzo;
