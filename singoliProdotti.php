@@ -1,5 +1,6 @@
 <?php 
 require_once __DIR__ . '/cardProdotti.php';
+require_once __DIR__ . '/prodotti.php';
 
 $prodottoUno = new ProdottoCibo("Crocchette per cani Yarrah", "Cibo secco per cani adulti", 14.95 . ' Euro', "img/crocchette-cane.png", "secco", "2 kg");
 $categoriaUno = new CategoriaCane("medio", "adulto", "img/cane.png", "qualsiasi razza");
@@ -15,5 +16,6 @@ $prodottoTre = new ProdottoCuccia("Cuscino per gatto", "cuscino morbido per gatt
 $categoriaTre = new CategoriaGatto("qualsiasi", "qualsiasi", "img/gatto.png", "qualsiasi lunghezza");
 $cardTre = new Card($prodottoTre, $categoriaTre);
 echo $cardTre->printCard();
+
 
 ?>

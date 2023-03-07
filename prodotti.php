@@ -3,21 +3,34 @@
 require_once __DIR__.'/traits/nome.php';
 
 class Prodotto {
-
-use nome;
-
   public $nome;
   public $descrizione;
   public $prezzo;
   public $immagine;
 
   public function __construct($nome, $descrizione, $prezzo, $immagine) {
-      $this->nome = $nome;
+      $this->setNome($nome);
       $this->descrizione = $descrizione;
       $this->prezzo = $prezzo;
       $this->immagine = $immagine;
   }
+
+  public function setNome($nome) {
+    if (empty($nome)) {
+      throw new Exception('Il nome non può essere vuoto');
+    }
+    $this->nome = $nome;
+  }
 }
+
+try {
+  // istanzio un oggetto Prodotto con nome vuoto
+  $prodotto = new Prodotto('', 'Descrizione prodotto', 9.99, 'immagine.jpg');
+} catch (Exception $e) {
+  // catturo l'eccezione e gestisco l'errore
+  echo 'Si è verificato un errore: ' . $e->getMessage();
+}
+
 
 class ProdottoCibo extends Prodotto {
   public $seccoUmido;
