@@ -3,7 +3,10 @@
 require_once __DIR__.'/traits/nome.php';
 
 class Prodotto {
-  public $nome;
+
+  use Nome;
+
+  // public $nome;
   public $descrizione;
   public $prezzo;
   public $immagine;

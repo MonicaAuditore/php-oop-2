@@ -1,16 +1,16 @@
 <?php
 
-trait nome {
+trait Nome {
 
-  protected $nome;
+ public $nome;
 
-  public function getNome() {
-    return $this->nome;
+ public function setNome($nome) {
+  if (empty($nome)) {
+    throw new Exception('Il nome non può essere vuoto');
   }
+  $this->nome = $nome;
+}
 
-  public function setNome($nome) {
-    $this->nome = $nome;
-  }
 }
 
 ?>

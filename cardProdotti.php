@@ -34,13 +34,9 @@ class Card {
     echo '<p>Cuccia</p>';
   } else {
     echo '<p>Prodotto generico</p>';
-
-    
   }
   echo '</div>';
   }
-  
-  
 }
 echo '</div>';
 
